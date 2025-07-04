@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import WatchList from "./pages/WatchList"
 import Home from './pages/Home'
 import Navbar from './pages/Navbar'
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <WatchListProvider>
-      <BrowserRouter>
+      <HashRouter>
       <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -20,7 +20,7 @@ function App() {
           
 
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       </WatchListProvider>
     </>
   )
